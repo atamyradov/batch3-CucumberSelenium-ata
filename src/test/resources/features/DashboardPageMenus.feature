@@ -34,3 +34,16 @@ Feature: DashboardPage Menus
       | Developers |
       | All Posts  |
       | My Account |
+
+  @wip
+  Scenario: Log in as a specific user with data table
+    When the user logs in using following credentials
+#    Dilediğinizi yazabilirsiniz, açıklama yapabilirsiniz
+      | username | eurotech@gmail.com |
+      | password | Test12345!         |
+    Then the user should be able to login
+    Then the user should be able to see following menu test
+      | Developers | Eurotech |
+      | All Posts  | Mustafa  |
+      | My Account | Zehra    |
+    #Datatable ile step definitions larda yukaridaki datalari kullanabilirsiniz

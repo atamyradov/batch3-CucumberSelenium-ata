@@ -1,5 +1,6 @@
-@navigate
+
 Feature: Navigate to menu with Parameters
+
   Scenario: User navigate to menu
     Given the user is on the login page
     When the user logs in using "eurotech@gmail.com" and "Test12345!"
@@ -21,3 +22,15 @@ Feature: Navigate to menu with Parameters
     And the user navigates to "My Account" menu
     Then the user should be able to see header as "Dashboard"
 
+  @navigate
+  Scenario Outline: User navigate to menu outline
+    Given the user is on the login page
+    When the user logs in using "<userType>" and "<password>"
+    Then the user should be able to login
+    And the user navigates to "<menu>" menu
+    Then the user should be able to see header as "<Header>"
+    Examples:
+      | userType           | password   | menu       | Header                                  |
+      | eurotech@gmail.com | Test12345! | Developers | Filter Profiles by Skill or by Location |
+      | eurotech@gmail.com | Test12345! | All Posts  | Posts                                   |
+      | eurotech@gmail.com | Test12345! | My Account | Dashboard                               |
