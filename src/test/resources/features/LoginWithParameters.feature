@@ -1,6 +1,6 @@
 Feature: Login as different users
 
-
+@xyz
   Scenario: Login as student with parameters
     Given the user is on the login page
     When the user logs in using "zehra@gmail.com" and "12345#"

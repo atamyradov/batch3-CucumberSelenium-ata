@@ -15,7 +15,9 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/eurotechStudy/step_definitions",
         dryRun = false,
-        tags = "@edit"
+        tags = "@list"
+        //"@xyz"
+                //"@123"
                 //"@FailedTest"
 )
 public class CukesRunner {
